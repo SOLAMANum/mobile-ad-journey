@@ -287,6 +287,8 @@ function IntelligencePanel({
   );
 }
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function MobileAdIdJourney() {
   const [isMounted, setIsMounted] = useState(false);
@@ -312,8 +314,8 @@ export default function MobileAdIdJourney() {
   useEffect(() => {
     setIsMounted(true);
     Promise.all([
-      fetch('http://localhost:4000/api/cfpb').then(r => r.json()),
-      fetch('http://localhost:4000/api/gdelt').then(r => r.json()),
+      fetch(`${API_BASE_URL}/api/cfpb`).then(r => r.json()),
+      fetch(`${API_BASE_URL}/api/gdelt`).then(r => r.json()),
     ]).then(([cfpb, gdelt]) => {
       setCfpbData(cfpb);
       setGdeltData(gdelt);
@@ -322,7 +324,7 @@ export default function MobileAdIdJourney() {
 
   // Fetch Journey data when tracking toggles
   useEffect(() => {
-    fetch(`http://localhost:4000/api/journey?trackingEnabled=${trackingEnabled}`)
+    fetch(`${API_BASE_URL}/api/journey?trackingEnabled=${trackingEnabled}`)
       .then(r => r.json())
       .then(setJourneyData)
       .catch(console.error);
@@ -337,7 +339,7 @@ export default function MobileAdIdJourney() {
       risk: filterRisk,
       date: filterDate,
     });
-    fetch(`http://localhost:4000/api/events?${params}`)
+    fetch(`${API_BASE_URL}/api/events?${params}`)
       .then(r => r.json())
       .then((data: EventsResponse) => {
         setEventsData(data);

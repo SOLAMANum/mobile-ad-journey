@@ -1,0 +1,26 @@
+services:
+  # Backend API Server
+  - type: web
+    name: mobile-ad-journey-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 4000
+
+  # Frontend Dashboard
+  - type: web
+    name: mobile-ad-journey-frontend
+    env: node
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: NEXT_PUBLIC_API_URL
+        value: https://mobile-ad-journey-backend.onrender.com
