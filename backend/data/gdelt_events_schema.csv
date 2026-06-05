@@ -1,0 +1,4 @@
+url,url_mobile,title,seendate,domain,language,sourcecountry,themes
+https://example.news/regulators-probe-data-brokers,,Regulators Probe Data Brokers Over Mobile Tracking,20260428T100000Z,example.news,English,United States,ECON_TAXATION;LEGISLATION;CYBER_ATTACK
+https://tech.example/eu-bans-ad-tracking,,EU Considers Total Ban on Mobile Advertising IDs,20260427T153000Z,tech.example,English,European Union,CRISISLEX_CRISISLEXREC;INFO_HOAX;CYBER_SECURITY
+https://finance.example/ad-tech-stocks-fall,,Ad-Tech Stocks Plummet as Apple Strengthens ATT,20260426T091500Z,finance.example,English,United States,ECON_STOCKMARKET;TAX_FNCACT

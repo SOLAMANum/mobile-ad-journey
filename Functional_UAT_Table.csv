@@ -1,0 +1,9 @@
+Test Case ID,Test Category,Test Case,Expected Result,Pass/Fail,Comments
+TC-01,The Handshake,"Click on a data point in the 70% visualization area","The 30% sidebar populates with the correct metadata corresponding to the clicked point",,
+TC-02,Filter Logic,"Apply the 'Owner' filter to the visualization","The visualization accurately updates to only show points matching the selected Owner",,
+TC-03,Filter Logic,"Apply the 'Risk' filter to the visualization","The visualization accurately updates to only show points matching the selected Risk level",,
+TC-04,Filter Logic,"Apply the 'Date' filter to the visualization","The visualization accurately updates to reflect the selected Date range",,
+TC-05,Filter Logic,"Apply a combination of filters (e.g., Owner, Risk, and Date) simultaneously","The visualization correctly displays the intersection of all applied filters",,
+TC-06,Intelligence Value,"View the 'Who controls the rail' panel","The panel accurately reflects the corresponding [DataSource] findings based on the current selection/filters",,
+TC-07,The Handshake,"Click a different data point in the 70% visualization area","The 30% sidebar clears the previous metadata and seamlessly updates with the new selection's metadata",,
+TC-08,Filter Logic,"Clear all applied filters","The visualization resets to its default, unfiltered state, showing all data points",,
